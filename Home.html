@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APTIEX Segurança da Informação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>  <!--Header com atalhos-->
+        <h1>APTIEX Segurança da Informação</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <div class="container"> <!--Os artigos que vão aparecer na hora que abrir-->
+        <main>
+            <article>
+                <h2>Golpes com IA: Como se Proteger?</h2>
+                <img src="C:\Users\SuperChoque\Documents\SiteSI\SiteSI\Imagens\intelligenceScams.jpg" 
+                alt="Golpes com IA" class="article-image">
+                <p> Ainda tem que adicionar o texto</p>
+                <a href="#ler-mais" class="read-more">Leia mais</a>
+            </article>
+            
+            <article>
+                <h2>O que são Deepfakes?</h2>
+                <img src="C:\Users\SuperChoque\Documents\SiteSI\SiteSI\Imagens\deepfake.jpg" 
+                alt="Deepfakes" class="article-image">
+                <p>Falta adicionar o texto aqui também</p>
+                <a href="#ler-mais" class="read-more">Leia mais</a>
+            </article>
+        </main>
+
+        <aside>
+            <h2>Artigos Recentes</h2>   <!--Tem que adionar esses artigos ainda-->
+            <ul>
+                <li><a href="#artigo1">Impacto da IA na Segurança Digital</a></li> 
+                <li><a href="#artigo2">Como Identificar Golpes Virtuais</a></li>
+                <li><a href="#artigo3">Ferramentas de Segurança em Tempos de IA</a></li>
+            </ul>
+
+            <!--Tentativa de fomulário-->
+            <h2>Contato</h2>
+            <form action="process_contact.php" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <!--Final do teste-->
+
+            <h2>Categorias</h2>
+            <ul>
+                <li><a href="#golpes">Golpes</a></li>
+                <li><a href="#ia">Inteligência Artificial</a></li>
+                <li><a href="#seguranca">Segurança da Informação</a></li>
+            </ul>
+
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Blog sobre Segurança da Informação. Todos os direitos reservados.</p>
+    </footer>
+    <!--Script com animações que achei na internet--> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const articles = document.querySelectorAll('article');
+            articles.forEach((article, index) => {
+                setTimeout(() => {
+                    article.classList.add('fade-in', 'visible');
+                }, index * 300); // Animação em sequência
+            });
+        });
+    </script>
+</body>
+</html>

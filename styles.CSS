@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif; /*Estilos principais*/
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    flex-wrap: wrap; /* wrap para responsividade */
+}
+
+main {
+    flex: 3;
+    padding: 20px;
+}
+
+article {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #007BFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+aside {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Altera a direção para coluna em telas menores */
+    }
+
+    aside {
+        margin-left: 0; /* Remove a margem à esquerda do aside */
+        margin-top: 20px; /* Adiciona margem acima do aside */
+    }
+
+    nav ul li {
+        display: block; /* Altera os itens do menu para uma coluna */
+        margin: 10px 0; /* Ajusta a margem para um layout em coluna */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0; /* Ajusta o padding do cabeçalho */
+    }
+
+    main {
+        padding: 15px; /* Ajusta o padding do main */
+    }
+
+    article {
+        padding: 10px; /* Ajusta o padding dos artigos */
+    }
+
+    .read-more {
+        padding: 8px 10px; /* Ajusta o padding do botão "Leia mais" */
+    }
+
+    aside {
+        padding: 15px; /* Ajusta o padding do aside */
+    }
+}
+
+/*Tentativa de adicionar animações
+
+/* Animação de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação para o cabeçalho */
+header {
+    animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
